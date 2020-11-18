@@ -4,20 +4,10 @@
 using namespace std;
 
 // Check pallindrome
-bool checkPallindrome(const string & str) {
-    for (int idx = 0; idx < (str.length()+1)/2; idx++) {
-        // reverse index
-        int jdx = str.length() - 1 - idx;
-        // condition
-        if (str[idx] != str[jdx]) return false;
-    }
-    return true;
-}
+bool checkPallindrome(const string & str);
 
 // Test function
-void testString(const string & str) {
-    cout << "Test string: \"" << str.c_str() << "\" is " << (checkPallindrome(str) ? "True":"False") << endl; 
-}
+void testString(const string & str);
 
 // main
 int main () {
@@ -35,4 +25,20 @@ int main () {
 
 
     return 0;
+}
+
+// Check pallindrome
+bool checkPallindrome(const string & str) {
+    for (int idx = 0; idx < (str.length()+1)/2; idx++) {
+        // reverse index
+        int jdx = str.length() - 1 - idx;
+        // condition
+        if (str[idx] != str[jdx]) return false;
+    }
+    return true;
+}
+
+// Test function
+void testString(const string & str) {
+    cout << "Test string: \"" << str.c_str() << "\" is " << (checkPallindrome(str) ? "True":"False") << endl; 
 }
