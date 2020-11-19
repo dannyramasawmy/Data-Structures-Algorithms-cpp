@@ -12,15 +12,9 @@ int firstDuplicate(const vector<int> &a)
     for (int idx = 0; idx < a.size(); idx++)
     {
         if (count[a[idx] - 1] > 0)
-        {
-            // if more than 0 its a repeat
             return a[idx];
-        }
         else
-        {
-            // if zero increment
             count[a[idx] - 1] += 1;
-        }
     }
 
     return -1;
