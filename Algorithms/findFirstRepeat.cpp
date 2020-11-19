@@ -9,7 +9,7 @@ int firstDuplicate(const vector<int> &a)
     vector<int> count(a.size(), 0);
 
     // loop through a
-    for (int idx = 0; idx < a.size(); idx++)
+    for (int idx = 0; idx < a.size(); idx++) 
     {
         if (count[a[idx] - 1] > 0)
             return a[idx];
